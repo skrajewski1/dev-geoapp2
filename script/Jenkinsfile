@@ -5,11 +5,7 @@ pipeline{
    }
 
    stages{
-    stage("sonar-scan"){
-        steps{
-           sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=skrajewski1_geo-app'
-        }
-    }
+    
     stage("maven"){
         steps{
         sh 'mvn clean validate compile install test package'
