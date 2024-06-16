@@ -43,7 +43,7 @@ pipeline{
         }
     }
 
-    stage('docker Push'){
+    stage('Docker Push'){
         steps{
             sh 'docker push 637423414297.dkr.ecr.us-east-1.amazonaws.com/utc-app-dev:latest'
             sh 'docker push 637423414297.dkr.ecr.us-east-1.amazonaws.com/utc-app-dev:v.${BUILD_ID}'
